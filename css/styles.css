@@ -163,7 +163,7 @@ header{
     align-items: center;
 }
 
-.contact-item::before{
+/* .contact-item::before{
     content: "";
     width: 16px;
     height: 16px;
@@ -179,7 +179,7 @@ header{
 
 .phone::before{
     background-image: url(../images/smartphone.svg);
-}
+} */
 
 
 /* герой */
@@ -246,14 +246,6 @@ header{
   
 }
 
-/* .advantages-list img{
-    padding: 25px 100px;
-    margin-bottom: 30px;
-
-    background-color: var(--secondary-bgc);
-    border-radius: 4px;
-} */
-
 .advantages-list h3{
     margin-bottom: 10px;
 }
@@ -275,7 +267,7 @@ header{
     margin-left: 30px;
 }
 
-.advantages-list-item::before{
+/* .advantages-list-item::before{
     display: block;
     content: "";
     width: 270px;
@@ -301,8 +293,18 @@ header{
 
 .advantages-list-item.astronaut::before{
     background-image: url(../images/astronaut.svg);
-}
+} */
 
+.adventages-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 270px;
+    height: 120px;
+    margin-bottom: 30px;
+    border-radius: 4px;
+    background-color: var(--secondary-bgc)  
+}
 
 
 /* Чем мы занимаемся */
@@ -390,7 +392,7 @@ border-radius: 0px 0px 4px 4px;
     width: 206px;
 }
 
-li.sm-list-item{
+.sm-list-item{
     display: flex;
     width: 44px;
     height: 44px;
@@ -399,6 +401,7 @@ li.sm-list-item{
     align-items: center;
     border-radius: 50%;
 }
+
 
 .item-icon{
     width: 20px;
@@ -418,28 +421,34 @@ li.sm-list-item{
     padding-bottom: 94px;
 }
 
-.client-list-item:hover .clients-list-item-icon{
-    fill: var(--additional-color); 
-}
 
 .clients-list{
     display: flex;
     justify-content: space-between;
 }
 
-.clients-list-item .client{
-
+.clients-list-item{
     display: flex;
-    justify-content: center;
-    align-items: center;
     width: 170px;
     height: 90px;
+    justify-content: center;
+    align-items: center;
     border: 1px solid #AFB1B8;
     border-radius: 4px;
+    
 }
 
-.clients-list-item-icon{
-    text-align: center;
+.company-logo{
+    --color1: #AFB1B8;
+
+}
+
+.clients-list-item:hover .company-logo{
+    --color1: #2196F3;
+}
+
+.clients-list-item:hover{
+    border: 1px solid #2196F3
 }
 
 /* footer */
@@ -451,7 +460,6 @@ footer{
     margin-right: 0px;
 margin-bottom: 20px;
 }
-    
 
 .location{
     display: flex;
