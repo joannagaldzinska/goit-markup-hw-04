@@ -176,7 +176,10 @@ header{
 .contact-icon{
     fill: var(--primary-text-color);
     margin-right: 10px;
+    height: 16px;
+    width: 16px;
 }
+
 
 /* .contact-item::before{
     content: "";
@@ -398,7 +401,6 @@ border-radius: 0px 0px 4px 4px;
 .sm-list-item:hover,
 .sm-list-item:focus{
     background-color: var(--additional-color);
-    cursor: pointer;
 }
 
 .sm-list{
@@ -472,9 +474,6 @@ border-radius: 0px 0px 4px 4px;
     --color1: #2196F3;
 }
 
-.client:focus .clients-list-item{
-    border: 1px solid #2196F3;
-}
 
 /* footer */
 
