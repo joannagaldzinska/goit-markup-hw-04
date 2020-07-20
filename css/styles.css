@@ -134,6 +134,9 @@ header{
 /* CONTACTS */
 
 .contacts a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: var(--primary-text-color);
     text-decoration: none;
     font-weight: 500;
@@ -142,12 +145,8 @@ header{
     letter-spacing: 0.02em;
 }
 
-.contacts a:hover{
-    color: var(--additional-color)
-}
-
 .contacts{
-    display: flex;
+    display: inline-flex;
 }
 
 .contacts-container{
@@ -159,8 +158,24 @@ header{
 }
 
 .contact-item{
-    display: inline-flex;
+    display: flex;
     align-items: center;
+    justify-content: center;
+}
+
+.contact-item a:hover,
+.contact-item a:focus{
+    color: var(--additional-color)
+}
+
+.contact-item a:hover .contact-icon,
+.contact-item a:focus .contact-icon{
+    fill: var(--additional-color)
+}
+
+.contact-icon{
+    fill: var(--primary-text-color);
+    margin-right: 10px;
 }
 
 /* .contact-item::before{
@@ -409,7 +424,8 @@ border-radius: 0px 0px 4px 4px;
     fill: #AFB1B8;
 }
 
-.sm-list-item:hover .item-icon{
+.sm-list-item:hover .item-icon,
+.sm-list-item:focus .item-icon{
     fill: white;
 }
 
@@ -435,6 +451,7 @@ border-radius: 0px 0px 4px 4px;
     align-items: center;
     border: 1px solid #AFB1B8;
     border-radius: 4px;
+    cursor: pointer;
     
 }
 
@@ -448,7 +465,15 @@ border-radius: 0px 0px 4px 4px;
 }
 
 .clients-list-item:hover{
-    border: 1px solid #2196F3
+    border: 1px solid #2196F3;
+}
+
+.client:focus .company-logo{
+    --color1: #2196F3;
+}
+
+.client:focus .clients-list-item{
+    border: 1px solid #2196F3;
 }
 
 /* footer */
@@ -534,8 +559,9 @@ margin-bottom: 20px;
 }
 
 .footer-attention .sm-list-item:hover{
-    background-color: var(--additional-color)
+    background-color: var(--additional-color);
 }
+
 
 /* PORTFOLIO */
 
