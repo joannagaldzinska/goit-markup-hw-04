@@ -19,10 +19,6 @@ html{
     box-sizing: inherit; 
 }
 
-*:focus{
-    outline: none;
-}
-
 body{
     color:var(--primary-text-color);
     background-color: var(--primary-bgc);
@@ -413,7 +409,7 @@ border-radius: 0px 0px 4px 4px;
     width: 206px;
 }
 
-.sm-list-item{
+.sm-list-item-icon{
     display: flex;
     width: 44px;
     height: 44px;
@@ -423,7 +419,9 @@ border-radius: 0px 0px 4px 4px;
     border-radius: 50%;
 }
 
-.sm-list-item:hover{
+
+.sm-list-item-icon:hover,
+.sm-list-item-icon:focus{
     background-color: var(--additional-color);
 }
 
@@ -437,6 +435,9 @@ border-radius: 0px 0px 4px 4px;
 .sm-list-item:hover .item-icon,
 .sm-list-item-icon:focus .item-icon{
     fill: white;
+}
+
+.sm-list-item-icon:focus .sm-list-item{
     background-color: var(--additional-color);
 }
 
@@ -453,7 +454,7 @@ border-radius: 0px 0px 4px 4px;
     justify-content: space-between;
 }
 
-.clients-list-item{
+.client{
     display: flex;
     width: 170px;
     height: 90px;
@@ -462,7 +463,6 @@ border-radius: 0px 0px 4px 4px;
     border: 1px solid #AFB1B8;
     border-radius: 4px;
     cursor: pointer;
-    
 }
 
 .company-logo{
@@ -470,23 +470,15 @@ border-radius: 0px 0px 4px 4px;
 
 }
 
-.clients-list-item:hover .company-logo{
-    --color1: #2196F3;
-}
-
-.clients-list-item:hover{
-    border: 1px solid #2196F3;
-}
-
+.client:hover .company-logo,
 .client:focus .company-logo{
     --color1: #2196F3;
 }
 
-
-.clients-list-item:focus{
+.client:hover,
+.client:focus{
     border: 1px solid #2196F3;
 }
-
 
 
 /* footer */
@@ -568,11 +560,12 @@ footer{
     fill: #fff;
 }
 
-.footer-attention .sm-list-item{
+.footer-attention .sm-list-item-icon{
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-.footer-attention .sm-list-item:hover{
+.sm-list-item-icon:hover,
+.sm-list-item-icon:focus{
     background-color: var(--additional-color);
 }
 
