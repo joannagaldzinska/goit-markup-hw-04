@@ -19,6 +19,10 @@ html{
     box-sizing: inherit; 
 }
 
+*:focus{
+    outline: none;
+}
+
 body{
     color:var(--primary-text-color);
     background-color: var(--primary-bgc);
@@ -384,8 +388,7 @@ h1, h2, h3, h4, h5, h6, p, b {
     margin-bottom: 16px;
 }
 
-.team a:hover,
-.team a:focus{
+.team a:hover{
     background-color: var(--additional-color);
 }
 
@@ -404,12 +407,6 @@ h1, h2, h3, h4, h5, h6, p, b {
 border-radius: 0px 0px 4px 4px;
 }
 
-
-.sm-list-item:hover,
-.sm-list-item:focus{
-    background-color: var(--additional-color);
-}
-
 .sm-list{
     display: flex;
     justify-content: space-between;
@@ -426,6 +423,10 @@ border-radius: 0px 0px 4px 4px;
     border-radius: 50%;
 }
 
+.sm-list-item:hover{
+    background-color: var(--additional-color);
+}
+
 
 .item-icon{
     width: 20px;
@@ -434,10 +435,10 @@ border-radius: 0px 0px 4px 4px;
 }
 
 .sm-list-item:hover .item-icon,
-.sm-list-item:focus .item-icon{
+.sm-list-item-icon:focus .item-icon{
     fill: white;
+    background-color: var(--additional-color);
 }
-
 
 /* Постоянные клиенты  */
 
@@ -480,6 +481,12 @@ border-radius: 0px 0px 4px 4px;
 .client:focus .company-logo{
     --color1: #2196F3;
 }
+
+
+.clients-list-item:focus{
+    border: 1px solid #2196F3;
+}
+
 
 
 /* footer */
@@ -570,6 +577,7 @@ footer{
 }
 
 
+
 /* PORTFOLIO */
 
 .portfolio{
@@ -611,7 +619,15 @@ button{
 .portfolio-page{
      border-top: 1px solid #ECECEC;
 }
+
 .portfolio-button:hover{
+    color: var(--white-title-color);
+    background-color: var(--additional-color);
+    cursor: pointer;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 3px 1px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-button:focus{
     color: var(--white-title-color);
     background-color: var(--additional-color);
     cursor: pointer;
@@ -682,5 +698,8 @@ button{
 
 .portfolio-list-item a:hover{
     box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
+}
 
+.portfolio-list-item a:focus{
+    box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
 }
