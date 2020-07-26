@@ -112,7 +112,6 @@ h1, h2, h3, h4, h5, h6, p, b {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 32px;
 }
 
 .nav.list{
@@ -131,12 +130,17 @@ h1, h2, h3, h4, h5, h6, p, b {
 
  .active-page::after{
     content: "";
+    position: absolute;
+    bottom: -31px;
     display: block;
-    width: auto;
+    width: 100%;
     height: 4px;
     background-color: var(--additional-color);
-    margin-top: 27px;
     border-radius: 2px;
+}
+
+.active-page{
+    position: relative;
 }
 
 
@@ -190,25 +194,6 @@ h1, h2, h3, h4, h5, h6, p, b {
     height: 16px;
     width: 16px;
 }
-
-
-/* .contact-item::before{
-    content: "";
-    width: 16px;
-    height: 16px;
-    margin-right: 10px;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.email::before{
-    background-image: url(../images/envelope.svg);
-}
-
-
-.phone::before{
-    background-image: url(../images/smartphone.svg);
-} */
 
 
 /* герой */
@@ -340,8 +325,20 @@ h1, h2, h3, h4, h5, h6, p, b {
     padding-bottom: 94px;
 }
 
+.activities-list{
+    display: flex;
+    justify-content: space-between;
+}
+
+.activities-list-item{
+    position: relative;
+}
+
 .activities-list h3{
-    display: block;
+    position: absolute;
+    left:0;
+    bottom: 0;
+    width: 100%;
     background-color: rgba(47, 48, 58, 0.8);;
     color: var(--white-title-color);
     text-align: center;
@@ -349,10 +346,6 @@ h1, h2, h3, h4, h5, h6, p, b {
     padding-bottom: 27px;
 }
 
-.activities-list{
-    display: flex;
-    justify-content: space-between;
-}
 
 .activities-list-item img{
     display: block;
@@ -652,11 +645,19 @@ button{
 }
 
 .portfolio-description{
+    position: absolute;
+    top: 0;
     color: var(--white-title-color);
     font-size: 18px;
     line-height: 28px;
-    width: 322px;
+    width: 370px;
     padding: 63px 24px;
+    opacity: 0;
+}
+
+.portfolio-list-item a:hover .portfolio-description{
+    opacity: 1;
+
 }
 
 .portfolio-list{
@@ -665,6 +666,7 @@ button{
 }
 
 .portfolio-list-item{
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -677,9 +679,25 @@ button{
     border: 1px solid #EEEEEE;
 }
 
-.portfolio-list-item img{
+
+
+.pic{
+    position: relative;
+    display: block;
     margin-bottom: 20px;
 }
+
+.pic::before{
+    position: absolute;
+    content: '';
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(33, 150, 243, 0.9);
+    opacity: 0;
+    overflow: hidden;
+}
+
 
 .portfolio-list-item:nth-child(3n){
     margin-right: 0;
@@ -695,4 +713,8 @@ button{
 
 .portfolio-list-item a:focus{
     box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
+}
+
+.portfolio-list-item a:hover .pic::before{
+    opacity: 1;
 }
